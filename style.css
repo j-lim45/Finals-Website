@@ -38,6 +38,7 @@ p, h1 {
     position: sticky;
     top: 0px;
     font-family: var(--serif-header);
+    overflow: hidden;
 }
 
 #header p, #header a {
@@ -90,6 +91,7 @@ p, h1 {
 .firstimage {
     width: 100%;
     height: 1000px;
+    overflow: hidden;
 }
 
 .firstimage img {
@@ -164,4 +166,35 @@ p, h1 {
     font-family: var(--serif-header-2);
     text-align: center;
     font-size: 64px;
+}
+
+.idk2 p {
+    font-family: var(--serif-text);
+    text-align: center;
+    font-size: 32px;
+    margin: 2vw 10%;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+    width: 225px;
+    cursor: pointer;
+    font-family: var(--serif-text);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--blue-3);
+    border: 3px solid var(--blue-3);
+    border-radius: 50px;   
+
+    }
+
+    
+
+button:hover {
+    border: 3px solid var(--blue-3);
+    background-color: var(--white);
+    color: var(--blue-3);
 }
