@@ -1,0 +1,167 @@
+@font-face { font-family: sans-serif; src: url('fonts/Butler_Light.otf'); }
+@font-face { font-family: "Trajan Pro"; src: url('fonts/TrajanPro-Regular.ttf'); }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face { font-family: "Kaisei Tokumin"; src: url('fonts/KaiseiTokumin-Regular.ttf'); }
+
+
+body {
+    margin: 0 0;
+}
+
+:root {
+    --pink: #b2a4bd;
+    --pink-2: #8876a0;
+    --pink-3: #4b4e74;
+    --maroon: #492d4b;
+    --blue: #485d81;
+    --blue-2: #22345c;
+    --blue-3: #152041;
+    --blue-4: #1a163e;
+    --white: #EAEAEA;
+    --serif-header: 'Trajan Pro', 'Arial', Times, serif;
+    --serif-header-2: "Kaisei Tokumin", 'Times New Roman', serif;
+    --serif-text: "Kaisei Tokumin", Arial;
+    --sans-serif-text: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+p, h1 {
+    font-family: var(--serif-header);
+}
+
+#header {
+    background-color: var(--blue-3);
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0px;
+    font-family: var(--serif-header);
+}
+
+#header p, #header a {
+    color: var(--pink);
+}
+
+#header p {
+    font-weight: 600;
+}
+
+#header a {
+    font-family: var(--sans-serif-text);
+    font-weight: 400;
+}
+
+#header div {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo p {
+    font-size: 48px;
+    margin: auto 0;
+}
+
+.logo img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.links {
+    margin-right: 3vw;
+    padding: 5px;
+    text-align: right;
+}
+
+.links a {
+    font-size: 24px;
+}
+
+.middlelink {
+    margin: 0 30px;
+}
+
+.firstimage {
+    width: 100%;
+    height: 1000px;
+}
+
+.firstimage img {
+    width: 100%;
+    height: 1000px;
+    filter: brightness(60%);
+}
+
+.firstimage p {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+
+    font-size: 96px;
+    color: var(--white);
+    text-shadow: 0 0 4px black, 2px 2px 32px black;
+}
+
+.idk {
+    margin: 0;
+    width: 100%;
+    height: 280px;
+    background-color: var(--blue-4);
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 10px black
+}
+
+.idk div {
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.idk div:nth-child(1) {
+    text-align: right;
+    float: right; 
+    margin-left: 250px;
+}
+
+.idk div:nth-child(3) {
+    text-align: left;
+    margin-right: 250px;
+}
+
+.idk h1 {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.idk p {
+    color: var(--white);
+    margin: 0;
+    min-height: 100%;
+    font-size: 24px;
+    font-family: var(--serif-text);
+    font-weight: 300;
+}
+
+.idk2 {
+    margin: 0;
+    width: 100%;
+    height: 480px;
+}
+
+.idk2 h1 {
+    margin: 15px 0;
+    font-family: var(--serif-header-2);
+    text-align: center;
+    font-size: 64px;
+}
