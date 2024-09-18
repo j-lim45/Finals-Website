@@ -1,5 +1,7 @@
-@font-face { font-family: sans-serif; src: url('fonts/Butler_Light.otf'); }
+@font-face { font-family: "Butler"; src: url('fonts/Butler_Light.otf'); } /* UNUSED FONT */
 @font-face { font-family: "Trajan Pro"; src: url('fonts/TrajanPro-Regular.ttf'); }
+@font-face { font-family: "Alumni Sans Regular"; src: url('fonts/AlumniSans-Regular.ttf'); }
+@font-face { font-family: "Alumni Sans ExtraLight"; src: url('fonts/AlumniSans-ExtraLight.ttf'); }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face { font-family: "Kaisei Tokumin"; src: url('fonts/KaiseiTokumin-Regular.ttf'); }
 
@@ -22,6 +24,8 @@ body {
     --serif-header-2: "Kaisei Tokumin", 'Times New Roman', serif;
     --serif-text: "Kaisei Tokumin", Arial;
     --sans-serif-text: 'Poppins', Arial, Helvetica, sans-serif;
+    --sans-serif-text-2: 'Alumni Sans Regular', "Comic Sans MS";
+    --sans-serif-text-2-light: 'Alumni Sans ExtraLight', "Comic Sans MS";
 }
 
 p, h1 {
@@ -62,6 +66,7 @@ h2 {
     font-family: var(--sans-serif-text);
     font-weight: 400;
     color: var(--pink);
+    text-decoration: none;
 }
 
 #header div {
@@ -183,7 +188,7 @@ h2 {
 }
 
 .idk2 h2 {
-    margin: 15px 0;
+    margin: 30px 0;
     font-family: var(--serif-header-2);
     text-align: center;
     font-size: 64px;
@@ -192,7 +197,7 @@ h2 {
 .idk2 p {
     font-family: var(--serif-text);
     text-align: center;
-    font-size: 32px;
+    font-size: 38px;
     margin: 2vw 10%;
 }
 
@@ -223,7 +228,9 @@ h2 {
 .idk3 {
     width: 100%;
     height: 480px;
-    background-color: var(--blue-2);
+    background-image: url('img/academics.png');
+    display: flex;
+    flex-direction: column;
 }
 
 .idk3 h2 {
@@ -264,3 +271,167 @@ h2 {
     background-color: var(--white);
     color: var(--blue-3);
 }
+
+#news {
+    width: 100%;
+    height: 820px;
+}
+
+#news h2 {
+    padding: 2rem 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.newspanel {
+    display: flex;
+    justify-content: center;
+}
+
+.newscard {
+    margin: 0 2rem;
+    width: 420px;
+    height: 540px;
+    background-color: var(--blue-2);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newscard span {
+    font-family: var(--sans-serif-text);
+    color: var(--white);
+    font-size: 12px;
+    font-style: italic;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+.newscard p {
+    font-family: var(--sans-serif-text);
+    color: var(--white);
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+.newscard img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50px 50px 0 0;
+    border: 0;
+}
+
+
+.newscard div {
+    background-color: var(--blue-2);
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0 0 50px 50px;
+    height: 15rem;
+}
+
+.newscard p {
+    margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h2 {
+    color: var(--pink);
+    margin: 0;
+    padding: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+#footer-main {
+    height: 300px;
+}
+
+.footer-text { /* Footer text below UH text and above the copyright section */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    margin: 30px 0;
+}
+
+.footer-text div { /* Makes sure that each div in footer text are same width to evenly center */
+    width: 500px;
+}
+
+#quick-links {  /* Data privacy and etc. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.footer-text div:nth-child(2) h4 {  /* Data privacy and etc. individual headers */
+    margin: 5px;
+    text-decoration: underline;
+}
+
+
+footer h3, footer h4, footer p {
+    text-align: center;
+    color: var(--white);
+}
+
+footer h3, footer h4 {
+    font-family: var(--sans-serif-text-2);
+    font-size: 32px;
+}
+
+footer h3 {
+    margin: 5px 0;
+}
+
+footer p { /* Small text below header text */
+    font-family: var(--sans-serif-text-2-light);
+    font-size: 24px;
+    margin: 10px;
+}
+
+footer div:nth-child(1) { /*  */
+    height: 100%;
+    background-color: var(--blue-4);
+}
+
+#contacts { /* if you center inline-block elements, use text align */
+    display: inline-block;
+    width: 500px;
+    text-align: center;
+}
+
+.contacts-section {
+    width: 200px !important;
+    display: inline-block;
+}
+
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#icons img {
+    width: 50px;
+    margin: 5px;
+}
+
+#copyright {
+    background-color: rgb(26, 26, 26);
+    height: 50px;
+}
+
