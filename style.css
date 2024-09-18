@@ -418,20 +418,20 @@ footer div:nth-child(1) { /*  */
 }
 
 
-#icons {
+#icons { /* the div for the icon lists */
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
-#icons img {
+#icons img { /* individual images of social media icons */
     width: 50px;
     margin: 5px;
+    cursor: pointer;
 }
 
 #copyright {
     background-color: rgb(26, 26, 26);
     height: 50px;
 }
-
