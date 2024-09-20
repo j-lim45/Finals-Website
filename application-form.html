@@ -28,14 +28,14 @@
             <hr>
 
             <p id="text-reminder">Please input all fields accurately.</p>
-            <form>
+            <form onsubmit="return confirm('Confirm inputting of data?');" onreset="return confirm('Confirm resetting of data?');">
                 <div class="input-field" id="name-field">
                     <label for="full-name">Full Name: </label>
-                    <input type="text" id="full-name" name="full-name" placeholder="John Doe">
+                    <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
                 </div>
                 <div class="input-field" id="birthday-field">
                     <label for="birthday">Birthday: </label>
-                    <input type="text" id="birthday" name="birthday" placeholder="DD/MM/YYYY">
+                    <input type="text" id="birthday" name="birthday" placeholder="DD/MM/YYYY" required>
                     <p>Date/Month/Year</p>
                 </div>
 
@@ -43,7 +43,7 @@
                 <div class="input-field" id="sex-field">
                     <label for="sex">Sex:</label>
 
-                    <select name="sex" id="sex">
+                    <select name="sex" id="sex" required>
                         <option value="">--Select--</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -53,12 +53,12 @@
 
                 <div class="input-field" id="email-field">
                     <label for="email">Email address:</label>
-                    <input type="email" id="email" name="email" placeholder="name@emailprovider.com">
+                    <input type="email" id="email" name="email" placeholder="name@emailprovider.com" required>
                 </div>
 
                 <div class="input-field" id="number-field">
                     <label for="phone-number">Phone Number:</label>
-                    <input type="number" id="phone-number" name="phone-number" placeholder="0491 570 006">
+                    <input type="number" id="phone-number" name="phone-number" placeholder="0491 570 006" required>
                 </div>
 
                 <div class="upload-field" id="upload-field">
@@ -68,44 +68,151 @@
                             <th><p>Grade 12 Copy of Grades</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('grade-12').click()">Upload</button>
-                                <input type="file" id="grade-12">
+                                <input type="file" id="grade-12" required>
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Recommendation Letter</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('recommendation').click()">Upload</button>
-                                <input type="file" id="recommendation">
+                                <input type="file" id="recommendation" required>
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>Birth Certificate</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('birth-certificate').click()">Upload</button>
-                                <input type="file" id="birth-certificate">
+                                <input type="file" id="birth-certificate" required>
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Medical Certificate</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('med-certificate').click()">Upload</button>
-                                <input type="file" id="medical-certificate">
+                                <input type="file" id="med-certificate" required>
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>Social Security</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('social-security').click()">Upload</button>
-                                <input type="file" id="social-security">
+                                <input type="file" id="social-security" required>
+                            </th>
+                        </tr>
+                        <tr class="upload-row odd-row">
+                            <th><p>Curriculum Vitae</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('cv').click()">Upload</button>
+                                <input type="file" id="cv" required>
+                            </th>
+                        </tr>
+                        <tr class="upload-row even-row">
+                            <th><p>Valid ID</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('valid-id').click()">Upload</button>
+                                <input type="file" id="valid-id" required>
+                            </th>
+                        </tr>
+                        <tr class="upload-row odd-row">
+                            <th><p>Police Clearance</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('police-clearance').click()">Upload</button>
+                                <input type="file" id="police-clearance" required>
+                            </th>
+                        </tr>
+                        <tr class="upload-row even-row">
+                            <th><p>NBI Clearance</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('nbi-clearance').click()">Upload</button>
+                                <input type="file" id="nbi-clearance" required>
                             </th>
                         </tr>
                     </table>
+
+                    <div class="input-field" id="program-choice">
+                        <label for="sex">Program Choice:</label>
+    
+                        <select name="program-choice" id="program-choice" required>
+                                <option value="">--Select--</option>
+                            <optgroup label="College of Engineering and Technology">
+                                <option>BS Civil Engineering</option>
+                                <option>BS Mechanical Engineering</option>
+                                <option>BS Architecture</option>
+                                <option>BS Interior Design</option>
+                                <option>BS Information Technology</option>
+                            </optgroup>
+                            <optgroup label="College of the Arts and Science">
+                                <option>BS Entemology</option>
+                                <option>BS Soul Manipulation</option>
+                                <option>AB Fine Arts</option>
+                                <option>AB Education</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="input-field" id="certify-checkbox">
+                        <input type="checkbox" id="certify" name="certify" required>
+                        <label for="certify">I HEREBY CERTIFY that the information provided in this form is complete, true
+                            and correct to the best of my knowledge. Any false information inputted will invalidate my admission and prevent me from reapplying from the university. </label>
+                    </div>
+
+                    <div id="form-buttons">
+                        
+                        <input type="reset" class="dark"> 
+                        <input type="submit" class="dark">
+
+                    </div>
+
                 </div>
 
 
             </form>
             
         </div>
+        
+        <footer>
+            <div id="footer-main">
+                <h2>UNIVERSITY OF HALLOWNEST</h2>
+                <div class="footer-text">
+                    <div>
+                        <h3>DEPARTMENTS</h3>
+                        <p>College of Engineering and Technology</p>
+                        <p>College of the Arts and Science</p>
+                    </div>
+                    <div id="quick-links">
+                        <h4>DATA PRIVACY</h4>
+                        <h4>JOBS & VACANCIES</h4>
+                        <h4>MAPS</h4>
+                    </div>
+                    <div><h3>CONNECT WITH US</h3>
+                        <div id="contacts">
+                            <div id="phone-numbers" class="contacts-section">
+                                <p>(63) 045 296 2948</p>
+                                <p>(63) 045 672 9165</p>
+                                <p>(63) 045 193 5715</p>
+                            </div>
+                            <div id="handles" class="contacts-section">
+                                <div id="icons">
+                                    <a href="https://www.facebook.com/">
+                                        <img src="img/facebook.png" alt="Facebook icon">
+                                    </a>
+                                    <a href="https://www.twitter.com/">  
+                                        <img src="img/twitter.png" alt="Twitter icon">
+                                    </a>
+                                    <a href="https://www.instagram.com/">
+                                        <img src="img/instagram.png" alt="Instagram icon">
+                                    </a>
+                                </div>
+                                <p>@universityofhallownest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright © 2024 University of Hallownest</p>
+            </div>
+        </footer>
 
         <script src="script.js"></script>
     </body>
