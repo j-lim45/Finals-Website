@@ -49,7 +49,57 @@
                         <option value="female">Female</option>
                         <option value="na">N/A</option>
                     </select>
+                </div>
 
+                <div class="input-field" id="email-field">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" placeholder="name@emailprovider.com">
+                </div>
+
+                <div class="input-field" id="number-field">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="number" id="phone-number" name="phone-number" placeholder="0491 570 006">
+                </div>
+
+                <div class="upload-field" id="upload-field">
+                    <label>Upload Documents</label>
+                    <table>
+                        <tr class="upload-row even-row">
+                            <th><p>Grade 12 Copy of Grades</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('grade-12').click()">Upload</button>
+                                <input type="file" id="grade-12">
+                            </th>
+                        </tr>
+                        <tr class="upload-row odd-row">
+                            <th><p>Recommendation Letter</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('recommendation').click()">Upload</button>
+                                <input type="file" id="recommendation">
+                            </th>
+                        </tr>
+                        <tr class="upload-row even-row">
+                            <th><p>Birth Certificate</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('birth-certificate').click()">Upload</button>
+                                <input type="file" id="birth-certificate">
+                            </th>
+                        </tr>
+                        <tr class="upload-row odd-row">
+                            <th><p>Medical Certificate</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('med-certificate').click()">Upload</button>
+                                <input type="file" id="medical-certificate">
+                            </th>
+                        </tr>
+                        <tr class="upload-row even-row">
+                            <th><p>Social Security</p></th>
+                            <th>
+                                <button type="button" onclick="document.getElementById('social-security').click()">Upload</button>
+                                <input type="file" id="social-security">
+                            </th>
+                        </tr>
+                    </table>
                 </div>
 
 

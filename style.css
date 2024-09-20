@@ -9,13 +9,6 @@
 @font-face { font-family: "Sansation Light"; src: url('fonts/Sansation_Light.ttf');}
 @font-face { font-family: "Sansation Bold"; src: url('fonts/Sansation_Bold.ttf');}
 
-body {
-    margin: 0 0;
-    background-color: var(--white);
-}
-
-a {text-decoration: none;}
-
 :root {
     --pink: #b2a4bd;
     --pink-2: #8876a0;
@@ -38,12 +31,20 @@ a {text-decoration: none;}
     --sans-serif-text-3-bold: 'Sansation Bold', "Arial Black", sans-serif;
 }
 
+body {
+    margin: 0 0;
+    background-color: var(--white); /* Makes sure white background isn't purely white */
+}
+
+a {text-decoration: none;} /* No hyperlink shall ever have a default underline */
+
+
 p, h1 {
-    font-family: var(--serif-text);
+    font-family: var(--serif-text); /* Default font for h1 and p is Kaisei Tokumin */
 }
 
 h2 {
-    font-family: var(--serif-header-2);
+    font-family: var(--serif-header-2); 
 }
 
 .text-shadow {
@@ -51,7 +52,7 @@ h2 {
     text-shadow: 0 0 4px black, 2px 2px 32px black;
 }
 
-.header-space {height:80px}
+.header-space {height:80px} /* Makes sure that top content doesn't overlap with the header */
 
 #header, .firstimage h1 {
     font-family: var(--serif-header);
@@ -582,17 +583,17 @@ width: 90%;
     width: 90%;
 }
 
-#text-reminder {
+#text-reminder { /* Please input all fields accurately. */
     color: #a2a2a2;
     font-family: var(--sans-serif-text-3-italic);
 }
 
-label {
+label, th p { /* Targets all label and the file upload label */
     font-family: var(--sans-serif-text-3);
     font-size: 32px;
 }
 
-.input-field {
+.input-field, .upload-field {
     margin-left: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -636,4 +637,69 @@ select, option, select::placeholder, option::placeholder {
     color: var(--blue-3);
     font-family: var(--sans-serif-text-3-light);
     font-size: 32px;
+}
+
+tr, tr p {
+    margin: 0;
+    padding: 0;
+    color: var(--blue-2);
+}
+
+tr p, tr label { /* Changes font of text inside upload table */
+    font-family: var(--sans-serif-text-3-light);
+}
+
+tr th:nth-child(1) { /* Increases width of the label column */
+    width: 900px;
+    text-align: left;
+}
+
+th p { /* Adjusts margin of file upload label in table */
+    margin: 10px;
+}
+
+
+th button {
+    width: 180px;
+    height: 40px;
+    border: 2px solid var(--blue-4);
+    border-radius: 8px;
+
+    font-size: 32px;
+    font-family: var(--sans-serif-text-3-light);
+}
+
+
+
+input[type=file] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--sans-serif-text-3);
+
+  }
+input[type=file]::file-selector-button {
+    display: none;
+}
+
+.upload-row label {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.upload-row { /* shows white background if row doesnt specify if even or odd */
+    background-color: var(--white);
+}
+
+.even-row {
+    background-color: var(--pink);
+}
+
+.odd-row, .odd-row th p {
+    background-color: var(--pink-2);
+    color: #EAEAEA;
 }
