@@ -1,4 +1,3 @@
-@font-face { font-family: "Butler"; src: url('fonts/Butler_Light.otf'); } /* UNUSED FONT */
 @font-face { font-family: "Trajan Pro"; src: url('fonts/TrajanPro-Regular.ttf'); }
 @font-face { font-family: "Alumni Sans Regular"; src: url('fonts/AlumniSans-Regular.ttf'); }
 @font-face { font-family: "Alumni Sans ExtraLight"; src: url('fonts/AlumniSans-ExtraLight.ttf'); }
@@ -787,6 +786,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* filter: brightness(0.6); */ /* Why is the h2 also affected by this */
 }
 
 .collegeImage h2 {
@@ -795,11 +795,37 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     top: 22%;
     text-align: center;
     color: var(--white);
-    font-size: 48px;
+    font-size: 64px;
 }
 
 .collegeDescription {
     height: 240px;
+    background-color: var(--blue-2);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.collegeDescription h3 {
+    font-family: var(--serif-header);
+    color: var(--white);
+    font-size: 48px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+}
+
+.collegeDescription p {
+    margin: 0;
+    color: var(--white);
+    font-size: 24px;
+    text-align: center;
+}
+
+#curriculumheader { /* Curriculum */
+    font-family: var(--serif-header);
+    font-size: 48px;
+    text-align: center;
 }
 
 .dropdown-table {
@@ -807,32 +833,31 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     margin: 0 auto;
     display: none; /* Is toggled true/false by js */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Makes sure it doesn't stretch the table to the end */
     background-color: var(--pink);
 }
 
-.dropdown button {
+.dropdown-tab button { /* The clickable area at the dropdown tab */
     width: 100%;
     height: 48px;
     margin: 0 auto;
     cursor: pointer;
     background-color: var(--maroon);
-}
+    border-radius: 10px;
 
-.dropdown-tab button {
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
 }
 
-.dropdown span:nth-of-type(1) {  
+.dropdown span:nth-of-type(1) {  /* The name of the course in the dropdown tab */
     color: var(--pink);
     font-family: var(--serif-header-2);
     font-size: 32px;
     margin: auto 0;
 }
 
-.arrow {
+.arrow { /* The tab arrow used for the dropdown curriculum tables */
     height: 100%;
     width: 48px;
 
@@ -865,3 +890,54 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 .dropdown tr th:nth-child(1) { /* Course code */ width: 140px;}
 .dropdown tr th:nth-child(2) { /* Course title */ width: 420px;}
 .dropdown tr td:nth-child(4) { /* Prereq column */ width: 200px;}
+
+#facultyTab {
+    margin: 30px 0;
+}
+
+#facultyTab h2 { /* Faculty */
+    text-align: center;
+    background-color: var(--pink-2);
+    font-family: var(--serif-header-2);
+    color: var(--blue-4);
+    text-shadow: 1px 1px 26px black;
+    font-weight:bold;
+    border: 2px solid var(--blue-4);
+    margin: 0;
+    height: 40px;
+}
+
+#collegeFaculty {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--pink);
+}
+
+.individualFaculty {
+    height: 320px;
+    background-color: var(--blue-2);
+    width: 240px;
+    text-align: center;
+    margin: auto 20px;
+}
+
+.individualFaculty, .individualFaculty img {
+    border-radius: 20px;
+}
+
+.individualFaculty h3 {
+    font-family: var(--serif-header);
+    color: var(--pink);
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.individualFaculty p {
+    font-family: var(--serif-header-2);
+    color: var(--pink-2);
+    margin: 0;
+    font-weight: 600;
+}
