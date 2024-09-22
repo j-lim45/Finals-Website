@@ -786,13 +786,20 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 .collegeImage {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .collegeImage h2 {
     position: absolute;
-    top: 30px;
+    width: 100%;
+    top: 22%;
     text-align: center;
     color: var(--white);
+    font-size: 48px;
+}
+
+.collegeDescription {
+    height: 240px;
 }
 
 .dropdown-table {
@@ -855,14 +862,6 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     color: var(--white);
 }
 
-.dropdown tr th:nth-child(1) { /* Course code */
-    width: 140px;
-}
-
-.dropdown tr th:nth-child(2) { /* Course title */
-    width: 420px;
-}
-
-.dropdown tr td:nth-child(4) { /* Prereq column */
-    width: 200px;
-}
+.dropdown tr th:nth-child(1) { /* Course code */ width: 140px;}
+.dropdown tr th:nth-child(2) { /* Course title */ width: 420px;}
+.dropdown tr td:nth-child(4) { /* Prereq column */ width: 200px;}
