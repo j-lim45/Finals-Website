@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>College of Engineering and Technology</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header-space"></div>
+        <div id="header">
+            <a class="logo" href="index.html">
+                    <img src="img/logo.png" alt="Universe of Hallownest logo">
+                    <span>University of Hallownest</span>
+            </a>
+            <div class="nav">
+                <p class="links">
+                    <a href="about.html">ABOUT</a>
+                    <a href="academics.html" class="middlelink">ACADEMICS</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsce')"><span>Bachelor of Science in Civil Engineering</span><span class="arrow" id="bsceArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsce">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>CHEME101</td><td>Engineering Chemisty</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>MATHE101</td><td>Differential Calculus</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>DRAFTENG</td><td>Drafting Applications for Engineers</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>15</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>PHYSENG101</td><td>Physics of Hallownest</td><td>5</td><td>MATHE101</td>      </tr>
+                    <tr>    <td>MATHE102</td><td>Integral Calculus</td><td>3</td><td>MATHE101</td>      </tr>
+                    <tr>    <td>DRAFTENG</td><td>Drafting Applications for Engineers</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>17</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>MATHE201</td><td>Differential Equations</td><td>3</td><td>MATHE102</td>     </tr>
+                    <tr>    <td>SURVENG</td><td>Surveying Fundamentals</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWARCH</td> <td>Architecture of Hallownest</td><td>2</td><td>None</td>      </tr>
+                    <tr>    <td>LUMAEE</td><td>Lumafly Electricity</td><td>3</td><td>CHEME101, PHYSENG101</td></tr>
+                    <tr>    <td>STATICSE</td><td>Statics of Rigid Bodies</td><td>3</td><td>MATHE102,PHYSENG101</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>14</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>DYNAMICSE</td><td>Dynamics of Rigid Bodies</td><td>3</td><td>STATICSE</td>      </tr>
+                    <tr>    <td>CONMATS</td><td>Construction Materials</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWARCH201</td><td>Architecture of Hallownest</td><td>2</td><td>None</td>       </tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>14</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsme')"><span>Bachelor of Science in Mechanical Engineering</span><span class="arrow" id="bsmeArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsme">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>CHEME101</td><td>Engineering Chemisty</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>MATHE101</td><td>Differential Calculus</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>DRAFTENG</td><td>Drafting Applications for Engineers</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>15</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>PHYSENG101</td><td>Physics of Hallownest</td><td>5</td><td>MATHE101</td>      </tr>
+                    <tr>    <td>MATHE102</td><td>Integral Calculus</td><td>3</td><td>MATHE101</td>      </tr>
+                    <tr>    <td>DRAFTENG</td><td>Drafting Applications for Engineers</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>17</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>MATHE201</td><td>Differential Equations</td><td>3</td><td>MATHE102</td>     </tr>
+                    <tr>    <td>INTROSAW</td><td>Introduction to Sawblades</td><td>3</td><td>HALLOWHIST</td></tr>
+                    <tr>    <td>THERMOME</td><td>Thermodynamics</td><td>3</td><td>MATHE102, PHYSENG101</td></tr>
+                    <tr>    <td>HALLOWARCH</td> <td>Architecture of Hallownest</td><td>2</td><td>None</td>      </tr>
+                    <tr>    <td>STATICSE</td><td>Statics of Rigid Bodies</td><td>3</td><td>MATHE102,PHYSENG101</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>14</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>DYNAMICSE</td><td>Dynamics of Rigid Bodies</td><td>3</td><td>STATICSE</td>      </tr>
+                    <tr>    <td>APPSAW</td><td>Application of Sawblades</td><td>3</td><td>INTROSAW</td></tr>
+                    <tr>    <td>HALLOWARCH201</td><td>Architecture of Hallownest</td><td>2</td><td>None</td>       </tr>
+                    <tr>    <td>LUMAEE</td><td>Lumafly Electricity</td><td>3</td><td>CHEME101, PHYSENG101</td></tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>17</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsa')"><span>Bachelor of Science in Architecture</span><span class="arrow" id="bsaArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsa">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ARCDESIGN</td><td>Architecture Design</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>ARCGRAPH</td><td>Architecture Graphics</td><td>5</td><td>None</td>      </tr>
+                    <tr>    <td>ARCTHEORY</td><td>Architecture Theory</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>ARCMENS</td><td>Solid Mensuration</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>17</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>PHYSENG101</td><td>Physics of Hallownest</td><td>3</td><td>MATHE101</td>      </tr>
+                    <tr>    <td>SURVENG</td><td>Surveying Fundamentals</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>CALCARC</td><td>Calculus</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>BUILDTECH</td><td>Building Technology</td><td>3</td><td>None</td>     </tr>
+                    <tr>    <td>HALLOWART</td><td>Introduction to Hallownest Art</td><td>2</td><td>HALLOWHIST</td></tr>
+                    <tr>    <td>HALLOWARCH201</td> <td>Architecture of Hallownest</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>STATICSE</td><td>Statics of Rigid Bodies</td><td>3</td><td>MATHE102,PHYSENG101</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>11</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>DYNAMICSE</td><td>Dynamics of Rigid Bodies</td><td>3</td><td>STATICSE</td>      </tr>
+                    <tr>    <td>HALLOWARCH202</td><td>Gothic Architecture</td><td>2</td><td>None</td>       </tr>
+                    <tr>    <td>LUMAEE</td><td>Lumafly Electricity</td><td>3</td><td>CHEME101, PHYSENG101</td></tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>14</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsit')"><span>Bachelor of Science in Information Technology</span><span class="arrow" id="bsitArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsit">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ITINTRO</td><td>Introduction to Computing</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>ITPROG</td><td>Fundamentals of Programming</td><td>5</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>11</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ITPHYS</td><td>Physics of Hallownest</td><td>3</td><td></td>      </tr>
+                    <tr>    <td>ITOOP</td><td>Object-Oriented Programming using Scarab</td><td>3</td><td>ITPROG</td>      </tr>
+                    <tr>    <td>CALCARC</td><td>Calculus</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ITARC</td><td>Computer Architecture</td><td>3</td><td>ITINTRO</td>     </tr>
+                    <tr>    <td>DSA</td><td>Data Structures and Algorithms</td><td>3</td><td>ITPROG</td></tr>
+                    <tr>    <td>STATICSE</td><td>Data Communications and Networking</td><td>3</td><td>ITINTRO</td>     </tr>
+                    <tr>    <td>ITALG</td><td>Linear Algebra for IT</td><td>3</td><td>None</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ITINFO</td><td>Information Management</td><td>3</td><td>DSA</td>      </tr>
+                    <tr>    <td>LUMAEE</td><td>Lumafly Electricity</td><td>3</td><td>ITPHYS</td></tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        
+        <script src="script.js"></script>
+    </body>
+</html>

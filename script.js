@@ -1,7 +1,7 @@
 (function(){
 
     var doc = document.documentElement;
-    var w   = window;
+    var w = window;
 
     var curScroll;
     var prevScroll = w.scrollY || doc.scrollTop;
@@ -49,4 +49,42 @@
 
     window.addEventListener('scroll', checkScroll);
 
+    
 })();
+
+function onsubmitfunc() {
+    window.addEventListener('submit', function(event){
+        
+    confirm('Confirm inputting of data?');
+    event.preventDefault(); /* Makes sure it doesnt do the default behavior  */
+    
+    console.log(document.getElementById("full-name").value)
+    nameToDisplay = document.getElementById("full-name").value;
+    window.location.href = "application-onsubmit.html";
+
+    })
+}
+
+
+var tableDisplay = new Map([
+    ['bsce', false],
+    ['bsme', false],
+    ['bsa', false],
+    ['bsit', false],
+    ['bsen', false],
+    ['bssm', false],
+    ['bafa', false],
+    ['baed', false]
+]);
+
+function displayTableCE(idName) {
+    if (tableDisplay.get(idName)) {
+        document.getElementById(idName).style.display = 'none';
+        document.getElementById(idName.concat('Arrow')).innerHTML = '&#62;';
+        tableDisplay.set(idName, false);
+    } else {
+        document.getElementById(idName).style.display = 'flex';
+        document.getElementById(idName.concat('Arrow')).innerHTML = 'v';
+        tableDisplay.set(idName, true);
+    }
+}

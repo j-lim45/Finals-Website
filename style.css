@@ -775,3 +775,83 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     font-weight: bold;
     font-style: italic;
 }
+
+/* ----------------------------- COLLEGES ------------------------------------- */
+
+
+.dropdown {
+    margin: 5px auto;
+    width: 90%;
+}
+
+.dropdown-table {
+    width: 100%;
+    margin: 0 auto;
+    display: none; /* Is toggled true/false by js */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--pink);
+}
+
+.dropdown button {
+    width: 100%;
+    height: 48px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: var(--maroon);
+}
+
+.dropdown-tab button {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.dropdown span:nth-of-type(1) {  
+    color: var(--pink);
+    font-family: var(--serif-header-2);
+    font-size: 32px;
+    margin: auto 0;
+}
+
+.arrow {
+    height: 100%;
+    width: 48px;
+
+    color: var(--pink);
+    background-color: #38223a;
+    font-size: 32px;
+    font-family: var(--sans-serif-text-3-bold);
+}
+
+.dropdown table, .dropdown td, .dropdown th, .dropdown tr {
+    border: 1px solid var(--pink-3);
+    font-family: var(--sans-serif-text);
+}
+
+.dropdown table {
+    border-collapse: collapse;
+    margin: 15px;
+}
+
+.dropdown tr:nth-child(1) {
+    background-color: var(--blue-2);
+    color: var(--white);
+}
+
+.dropdown tr:nth-child(2) {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.dropdown tr th:nth-child(1) { /* Course code */
+    width: 140px;
+}
+
+.dropdown tr th:nth-child(2) { /* Course title */
+    width: 420px;
+}
+
+.dropdown tr td:nth-child(4) { /* Prereq column */
+    width: 200px;
+}

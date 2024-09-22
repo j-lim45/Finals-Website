@@ -28,7 +28,7 @@
             <hr>
 
             <p id="text-reminder">Please input all fields accurately.</p>
-            <form onsubmit="return confirm('Confirm inputting of data?');" onreset="return confirm('Confirm resetting of data?');">
+            <form onsubmit="onsubmitfunc()" onreset="return confirm('Confirm resetting of data?');">
                 <div class="input-field" id="name-field">
                     <label for="full-name">Full Name: </label>
                     <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
@@ -58,7 +58,7 @@
 
                 <div class="input-field" id="number-field">
                     <label for="phone-number">Phone Number:</label>
-                    <input type="number" id="phone-number" name="phone-number" placeholder="0491 570 006" required>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="0491 570 006" required>
                 </div>
 
                 <div class="upload-field" id="upload-field">
@@ -138,7 +138,6 @@
                                 <option>BS Civil Engineering</option>
                                 <option>BS Mechanical Engineering</option>
                                 <option>BS Architecture</option>
-                                <option>BS Interior Design</option>
                                 <option>BS Information Technology</option>
                             </optgroup>
                             <optgroup label="College of the Arts and Science">
