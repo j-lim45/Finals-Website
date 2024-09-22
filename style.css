@@ -140,11 +140,12 @@ h2 {
     width: 100%;
     height: 1000px;
     filter: brightness(60%);
+    text-align: center;
 }
 
-.firstimage h1 { /* Please fix how the tagline is centered */
+.firstimage h1 {
     position: absolute;
-    top: 45%;
+    top: 450px;
     width: 100%;
     text-align: center;
 
@@ -452,8 +453,6 @@ footer div:nth-child(1) { /*  */
 }
 
 /* ---------------------------- ABOUT --------------------------------- */
-
-
 
 #about h2, #academics h2, #admissions h2 {
     font-size: 48px;
@@ -782,6 +781,18 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 .dropdown {
     margin: 5px auto;
     width: 90%;
+}
+
+.collegeImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.collegeImage h2 {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    color: var(--white);
 }
 
 .dropdown-table {
