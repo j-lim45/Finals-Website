@@ -53,7 +53,7 @@ h2 {
     text-shadow: 0 0 4px black, 2px 2px 32px black;
 }
 
-.header-space {height:80px} /* Makes sure that top content doesn't overlap with the header */
+.header-space {height: 80px} /* Makes sure that top content doesn't overlap with the header */
 
 #header, .firstimage h1 {
     font-family: var(--serif-header);
@@ -64,12 +64,29 @@ h2 {
     background-color: var(--blue-3);
     z-index: 1;
     height: 80px;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    flex-direction: column;
     top: 0;
     width: 100%;
     position: fixed;
     transition: all 0.3s ease;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#hamburger-menu {
+    display: none; /* Toggled by js using displayHamburgerMenu() */
+    height: 2rem;
+    border-top: 2px solid var(--pink-3);
+    background-color: var(--blue-4);
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 30px;
 }
 
 #header.hide {
@@ -87,17 +104,14 @@ h2 {
     text-decoration: none;
 }
 
-#header div {
-    width: 100%;
-    height: 100%;
-}
+
 
 .logo {
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
     cursor: pointer;
-    width: 100%;
+    width: 620px; /* How much width the uni name can take in header */
 }
 
 
@@ -152,6 +166,15 @@ h2 {
     color: var(--white);
 }
 
+.header-section { /* hx text in different pages */
+    margin-top: 1rem;
+    border-top: 5px solid var(--pink-2);
+    background-color: var(--blue-4);
+    color: var(--white);
+    box-shadow: 0 0 3px black
+}
+
+
 .idk {
     margin: 0;
     width: 100%;
@@ -159,7 +182,13 @@ h2 {
     background-color: var(--blue-4);
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0 10px black
+}
+
+#thatoneline {
+    width: 5px; 
+    max-height: 90%; 
+    background-color: white; 
+    margin: 10px 20px;
 }
 
 .idk div {
@@ -216,7 +245,7 @@ h2 {
     margin: 2vw 10%;
 }
 
-.dark {
+.dark { /* Dark filled button */
     display: block;
     margin: 0 auto;
     font-size: 32px;
@@ -258,9 +287,8 @@ h2 {
 
 .idk3 p {
     margin-left: 3vw;
-    width: 55%;
+    width: 60%;
     margin-bottom: 0;
-    margin-top: 24px;
     font-size: 36px;
     color: var(--white);
 }
@@ -285,6 +313,10 @@ h2 {
     border: 3px solid var(--white);
     background-color: var(--white);
     color: var(--blue-3);
+}
+
+.nav { /* Disabled when zoom level is 180% */
+    display: block;
 }
 
 #news {
@@ -352,11 +384,41 @@ h2 {
     margin: 0;
 }
 
+/*-------------------------------------NEWS ARTICLES---------------------------------------------*/
+
+#news-headline { /* The article headline */
+    color: var(--blue-4);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#byline { /* Author and date written */
+    margin: 0;
+    text-align: center;
+}
+
+#news-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#news-text p {
+    font-size: 24px;
+    margin: 40px;
+}
+
 /* FOOTER */
+
+/* #footer-space { makes sure footer doesnt overlap with main html content (300px for quick links, 50px for copyright)
+    width: 100%;
+    height: 350px;
+} */
 
 footer {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 footer h2 {
@@ -381,6 +443,10 @@ footer h2 {
 
 .footer-text div { /* Makes sure that each div in footer text are same width to evenly center */
     width: 500px;
+}
+
+#contacts div { /* Overrides .footer-text div style, makes sure sections in contacts are less than half of its parent width */
+    width: 200px;
 }
 
 #quick-links {  /* Data privacy and etc. */
@@ -416,7 +482,7 @@ footer p { /* Small text below header text */
     margin: 10px;
 }
 
-footer div:nth-child(1) { /*  */
+footer div:nth-child(1) { /* The blue part of the footer */
     height: 100%;
     background-color: var(--blue-4);
 }
@@ -427,8 +493,12 @@ footer div:nth-child(1) { /*  */
     text-align: center;
 }
 
+#phone-numbers a { /* Phone numbers at header */
+    color: var(--white);
+}
+
 .contacts-section {
-    width: 200px !important;
+    width: 200px;
     display: inline-block;
 }
 
@@ -453,10 +523,12 @@ footer div:nth-child(1) { /*  */
 
 /* ---------------------------- ABOUT --------------------------------- */
 
+
 #about h2, #academics h2, #admissions h2 {
     font-size: 48px;
-    margin: 1rem;
-    text-align: center;
+    display: flex;
+    margin: 0;
+    justify-content: center;
 }
 
 #about p {
@@ -502,30 +574,55 @@ width: 90%;
 .big-picture { /* div of the big header picture */
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin: 0;
+    background-color: var(--blue-2);
 }
 
 .big-picture img { /* Big header picture below the main page header text */
+    margin: 40px;
     max-width: 100%; min-width: 90%;
+}
+
+#program-list {
+    margin: 30px 0;
 }
 
 .individual-program { /* div of degree program and button */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    box-shadow: 0 0 5px black;
 }
 
+#cetProgram {
+    background-image: url('img/cetProgramPic.png');
+}
 
-#academics h3 { /* College of... */
+#casProgram {
+    background-image: url('img/casProgramPic.png');
+}
+
+.program-text {
+    color: var(--white);
+    width: 100%;
+    align-content: center;
+}
+
+.program-text h3 { /* The college name in academics page */
     font-family: var(--serif-header-2);
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 1px black;
+}
+
+.program-text p {
+    text-align: center;
     font-size: 32px;
 }
 
-#academics h3, .light-blue { /* Margin on degree program and button */
-    margin: 1vw 6rem;
-}
 
-.light-blue { /* Light buttons that have blue borders and text (Buttons in academic page) */
+.light-2 { /* Light buttons that have blue borders and text (Buttons in academic page) */
     display: block;
     font-size: 32px;
     width: 225px;
@@ -534,18 +631,18 @@ width: 90%;
     font-family: var(--serif-text);
     text-align: center;
     /* text-decoration: none; */
-    color: var(--blue-4);
-    border: 3px solid var(--blue-4);
+    color: var(--white);
+    border: 3px solid var(--white);
     border-radius: 50px;   
     background-color: transparent;
-    float: right;
+    margin: 20px auto;
 }
 
     
-.light-blue:hover {
-    border: 3px solid var(--blue-4);
-    background-color: var(--blue-4);
-    color: var(--white);
+.light-2:hover {
+    border: 3px solid var(--white);
+    background-color: var(--white);
+    color: var(--blue-4);
 }
 
 /* ---------------------------- ADMISSIONS --------------------------------- */
@@ -804,6 +901,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    box-shadow: 0 0 10px black;
 }
 
 .collegeDescription h3 {
@@ -816,10 +914,10 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 }
 
 .collegeDescription p {
-    margin: 0;
     color: var(--white);
     font-size: 24px;
     text-align: center;
+    margin: 0 30px;
 }
 
 #curriculumheader { /* Curriculum */
@@ -940,4 +1038,334 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     color: var(--pink-2);
     margin: 0;
     font-weight: 600;
+}
+
+
+/**************************************************DESKTOP ZOOMED************************************************************/
+
+#hamburger {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1120px) { /* 170% */
+    .nav {
+        display: none;
+    }
+
+    .idk3 p {
+        width: 80%;
+    }
+
+    .idk p {
+        font-size: 100%;
+    }
+
+
+    #hamburger {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .newscard p {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100px !important;
+        height: 40px;
+        font-size: 12px !important;
+    }
+
+    .idk2 h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 64px;
+    }
+    
+    .idk2 p {
+        font-family: var(--serif-text);
+        text-align: center;
+        font-size: 32px;
+        
+        margin: 2vw 10%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1500px) { /* 130% */
+    .idk div:nth-child(1) {
+        margin-left: 20px;
+    }
+
+    .idk div:nth-child(3) {
+        margin-right: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1400px) { /* 140% */
+    
+    
+footer h2 {
+    color: var(--pink);
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#footer-main {
+    height: 200px;
+}
+
+.footer-text { /* Footer text below UH text and above the copyright section */
+
+    margin: 30px 0; /* ??? */
+}
+
+.footer-text div { /* Makes sure that each div in footer text are same width to evenly center */
+    width: 400px; /*??? */
+    height: 90px;
+}
+
+
+.footer-text div:nth-child(2) h4 {  /* Data privacy and etc. individual headers */
+    margin: 0px;
+    text-decoration: underline;
+}
+
+#news {
+    height: 600px;
+}
+
+
+
+footer h3, footer h4 {
+    font-family: var(--sans-serif-text-2);
+    font-size: 24px;
+}
+
+footer h3 {
+    margin: 0px 0;
+}
+
+footer p { /* Small text below header text */
+    font-family: var(--sans-serif-text-2-light);
+    font-size: 16px;
+
+    /* Makes sure there is no extra white space at the bottom of the page because of margin stretching the page */
+    padding-top: 5px;
+    margin: 0;
+}
+
+footer div:nth-child(1) { /*  */
+    height: 100%;
+    background-color: var(--blue-4);
+}
+
+#contacts { /* if you center inline-block elements, use text align */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#contacts div {
+    display: inline-block;
+    width: 110px;
+    height: 55px;
+}
+
+
+.contacts-section {
+    display: inline-block;
+}
+
+#icons { /* the div for the icon lists */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 0px !important;
+}
+
+#handles p {margin: 0;}
+
+#icons img { /* individual images of social media icons */
+    width: 20px;
+    margin: 1px;
+    cursor: pointer;
+}
+
+
+#copyright {
+    background-color: rgb(26, 26, 26);
+    height: 25px;
+}
+
+.newscard {
+    height: 400px;
+    width: 300px;
+}
+
+.newscard p {padding: 5px;}
+
+.newscard img {
+    width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 1600px) { /* 120% */
+    /* .idk3 p {
+        font-size: 26px;
+    } */
+}
+
+
+
+@media screen and (max-width: 1120px) {
+    .idk2 p {
+        font-size: 32px;
+    }
+}
+
+/***********************PHONE***********************************/
+
+@media only screen and (max-width:450px) {
+
+    .firstimage h1 {
+        top: 175px;
+    }
+
+    .logo span { /* University of Hallownest */
+        font-size: 16px;
+        width: 40%;
+    }
+
+    #header {
+        width: 100%;
+    }
+
+    #hamburger {
+        width: 26px;
+        height: 40%;
+        margin: auto 15px;
+    }
+
+    .firstimage {
+        width: 100%;
+        height: 250px;
+    }
+
+    .firstimage img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .firstimage h1 {
+        font-size: 2em;
+    }
+
+    #thatoneline {
+        margin: 10px;
+        height: 90%;
+        width: 3px; /* thinner line */
+    }
+
+    .idk {
+        height: 200px;
+    }
+
+    
+    .idk h2 { /* Form Connections / Experience Education */
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .idk p {
+        font-size: 12px;
+    }
+
+    .idk2 {
+        height: 270px;
+    }
+
+    .idk2 h2 { /* Be the Light */
+        font-size: 32px;
+        margin: 15px;
+    }
+
+    .idk2 p {
+        font-size: 16px;
+    }
+
+    .idk3 {
+        background-repeat: no-repeat;
+        background-size: 1400px;
+        align-items: center;
+        height: 300px;
+    }
+
+    #news {
+        height: 100%;
+    }
+    .newspanel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newscard {
+        margin: 5px;
+    }
+
+
+    .idk3 h2 { /* ACADEMICS */
+        font-size: 32px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .idk3 p {
+        font-size: 16px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .idk3 button {
+        margin: 10px 0;
+    }
+
+    .newscard div p {
+        margin: 25px auto;
+        width: 80%;
+    }
+
+    .footer-text div {
+        width: 150px;
+    }
+
+    .footer-text h3, .footer-text h4 {
+        font-size: 16px;
+    }
+
+    .footer-text p {
+        font-size: 12px;
+    }
+
+    #phone-numbers p {
+        padding: 0;
+    }
+
+    .contacts-section p {
+        padding-top: 0px;
+    }
+
+    #handles {
+        padding-top: 5px;
+    }
+    
+    #contacts div {
+        height: 40px;
+    }
 }

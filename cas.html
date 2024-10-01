@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>College of the Arts and Science</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header-space"></div>
+        <div id="header">
+            <div id="header-container">
+                <a class="logo" href="index.html">
+                    <img src="img/logo.png" alt="hallownest logo">
+                    <span>University of Hallownest</span>
+                </a>
+                <img id="hamburger" src="img/hamburger.png" alt="hamburger" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <div class="nav">
+                    <p class="links">
+                        <a href="about.html">ABOUT</a>
+                        <a href="academics.html" class="middlelink">ACADEMICS</a>
+                        <a href="admissions.html">ADMISSIONS</a>
+                    </p>
+                </div>
+            </div>
+            <div id="hamburger-menu" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <a href="about.html">ABOUT</a>
+                <a href="academics.html" class="middlelink">ACADEMICS</a>
+                <a href="admissions.html">ADMISSIONS</a>
+            </div>
+        </div>
+
+        <div class="collegeImage">
+            <img src="img/cet.png">
+            <h2 class="text-shadow">College of the Arts and Science</h2>
+        </div>
+
+        <div class="collegeDescription">
+            <h3>Objective</h3>
+            <p>In line with Monomon's teachings, the College of the Arts and Science seeks to shape artistic and humanistic individuals with the intent
+                of developing the culture of Hallownest. Its mission is focused on communicating creative ideas, and learning the answer within what makes
+                Hallownest.
+            </p>
+        </div>
+
+        <h2 id="curriculumheader">Curriculum</h2>
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsen')"><span>Bachelor of Science in Entemology</span><span class="arrow" id="bsenArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsen">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ANISCI</td><td>Animal Science</td><td>5</td><td>None</td>       </tr>
+                    <tr>    <td>GENZOO</td><td>General Zoology</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>GENBOT</td><td>General Botany</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>14</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>PHYS101</td><td>Physics of Hallownest</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>CHEMBIO101</td><td>Chemical Biology I</td><td>5</td><td>None</td>      </tr>
+                    <tr>    <td>STATSBIO</td><td>Statistical Biology</td><td>5</td><td>None</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>16</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>MICROBIO</td><td>Microbiology</td><td>3</td><td>CHEMBIO101</td>     </tr>
+                    <tr>    <td>CHEMBIO102</td><td>Chemical Biology II</td><td>5</td><td>CHEMBIO101</td>      </tr>
+                    <tr>    <td>HALLOWECO</td> <td>Ecology of Hallownest</td><td>5</td><td>GENBOT, GENZOO, PHYS101</td>      </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>13</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>CHEMBIO103</td><td>Chemical Biology III</td><td>5</td><td>CHEMBIO102</td>      </tr>
+                    <tr>    <td>EVOBIO</td><td>Evolutionary Biology</td><td>3</td><td>CHEMBIO102, MICROBIO</td>      </tr>
+                    <tr>    <td>MOLBIO</td><td>Molecular Biology</td><td>3</td><td>CHEMBIO102, MICROBIO</td>       </tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>2</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>16</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bafa')"><span>Bachelor of Arts in Fine Arts</span><span class="arrow" id="bafaArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bafa">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ARTPERS</td><td>Perspective</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>ARTMATS</td><td>Materials</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>HALLOWART</td><td>Introduction to Art of Hallownest</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ARTCOL</td><td>Color Design</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>ARTFIG101</td><td>Figure Drawing</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>PHARART</td><td>Pharloom Art History</td><td>3</td><td>HALLOWART</td>        </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ARTSCUL</td><td>Sculpture</td><td>3</td><td>ARTMATS</td>     </tr>
+                    <tr>    <td>ARTFIG102</td><td>Figure Painting</td><td>3</td><td>ARTFIG</td></tr>
+                    <tr>    <td>ARTSTILL</td><td>Still Life Painting</td><td>3</td><td>None</td></tr>
+                    <tr>    <th>TOTAL</th><td></td><td>9</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>ARTPORT</td><td>Portraiture</td><td>3</td><td>ARTFIG102</td>      </tr>
+                    <tr>    <td>ARTPLAIN</td><td>Plain Air Painting</td><td>3</td><td>ARTSTILL</td></tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-tab">
+                <button onclick="displayTableCE('bsed')"><span>Bachelor of Arts in Education</span><span class="arrow" id="bsedArrow">&#62;</span></button>
+            </div>
+            <div class="dropdown-table" id="bsed">
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, FIRST SEMESTER</th>     </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>EDUSOC101</td><td>Social Studies Foundation</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>EDUPROF</td><td>The Education Profession</td><td>3</td><td>None</td>       </tr>
+                    <tr>    <td>INTROCOMM</td><td>Introduction of Communication</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWHIST</td><td>History of Hallownest</td><td>3</td><td>None</td>        </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>        </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>FIRST YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>EDUSPEC</td><td>Special and Inclusive Education</td><td>3</td><td>None</td>      </tr>
+                    <tr>    <td>EDUELEC101</td><td>Teaching Elective I</td><td>2</td><td>None</td>      </tr>
+                    <tr>    <td>HALLOWSCRIPTS</td><td>Divine Scriptures of Hallownest</td><td>3</td><td>HALLOWHIST</td>     </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>8</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, FIRST SEMESTER</th></tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>EDUELEC102</td><td>Teaching Elective II</td><td>2</td><td>None</td>     </tr>
+                    <tr>    <td>HALLOWPSYCH</td><td>Psychology of Hallownest</td><td>3</td><td>HALLOWHIST</td></tr>
+                    <tr>    <td>ANTHRO</td><td>Anthropology</td><td>3</td><td>None</td></tr>
+                    <tr>    <td>HALLOWGEO</td><td>Geography of Hallownest</td><td>3</td><td>HALLOWHIST</td></tr>
+                    <tr>    <th>TOTAL</th><td></td><td>11</td><td></td>     </tr>
+                </table>
+
+                <table>
+                    <tr>    <th colspan='4'>SECOND YEAR, SECOND SEMESTER</th>       </tr>
+                    <tr>    <th>Course Code</th><th>Course Title</th><th>Units</th><th>Prerequisite(s)</th>     </tr>
+                    <tr>    <td>EDUCURR</td><td>Institute Curriculum</td><td>3</td><td>EDUPROF</td>      </tr>
+                    <tr>    <td>HALLOWPOL</td><td>Politics of Hallownest</td><td>3</td><td>EDUSOC101, HALLOWPSYCH</td></tr>
+                    <tr>    <td>MONWORKS</td><td>Great Works of Monomon</td><td>3</td><td>HALLOWSCRIPTS</td>    </tr>
+                    <tr>    <td>HALLOWSERV</td><td>Hallownest Service and Training Program</td><td>3</td><td>HALLOWHIST</td>    </tr>
+                    <tr>    <th>TOTAL</th><td></td><td>12</td><td></td>     </tr>
+                </table>
+            </div>
+        </div>
+
+        </div>
+
+        <div id="facultyTab">
+            <h2>FACULTY</h2>
+            <div id="collegeFaculty">
+                <div class="individualFaculty">
+                    <img src="img/marissaportrait.png" alt="Marissa">
+                    <h3>Marissa, M.D</h3>
+                    <p>Associate Dean</p>
+                </div>
+                <div class="individualFaculty">
+                    <img src="img/monomonportrait.png" alt="Monomon">
+                    <h3>Monomon, Ph.D</h3>
+                    <p>Dean</p>
+                </div>
+                <div class="individualFaculty">
+                    <img src="img/sheoportrait.png" alt="Sheo">
+                    <h3>Sheo, M.D</h3>
+                    <p>Secretary</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-space"></div>
+        <footer>
+            <div id="footer-main">
+                <h2>UNIVERSITY OF HALLOWNEST</h2>
+                <div class="footer-text">
+                    <div>
+                        <h3>DEPARTMENTS</h3>
+                        <p>College of Engineering and Technology</p>
+                        <p>College of the Arts and Science</p>
+                    </div>
+                    <div id="quick-links">
+                        <h4>DATA PRIVACY</h4>
+                        <h4>JOBS & VACANCIES</h4>
+                        <h4>MAPS</h4>
+                    </div>
+                    <div><h3>CONNECT WITH US</h3>
+                        <div id="contacts">
+                            <div id="phone-numbers" class="contacts-section">
+                                <p><a href='tel:+630452962948'>(63) 045 296 2948</a></p>
+                                <p><a href='tel:+630456729165'>(63) 045 672 9165</a></p>
+                                <p><a href='tel:+630451935715'>(63) 045 193 5715</a></p>
+                            </div>
+                            <div id="handles" class="contacts-section">
+                                <div id="icons">
+                                    <a href="https://www.facebook.com/">
+                                        <img src="img/facebook.png" alt="Facebook icon">
+                                    </a>
+                                    <a href="https://www.twitter.com/">  
+                                        <img src="img/twitter.png" alt="Twitter icon">
+                                    </a>
+                                    <a href="https://www.instagram.com/">
+                                        <img src="img/instagram.png" alt="Instagram icon">
+                                    </a>
+                                </div>
+                                <p>@universityofhallownest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright © 2024 University of Hallownest</p>
+            </div>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

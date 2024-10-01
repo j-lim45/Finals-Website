@@ -7,20 +7,28 @@
         <link href="style.css" rel="stylesheet">
         
     </head>
-    <body onload="submitted()"> <!--Please fix this-->
+    <body onload="displaySubmittedValues()">
 
         <div class="header-space"></div>
         <div id="header">
-            <a class="logo" href="index.html">
+            <div id="header-container">
+                <a class="logo" href="index.html">
                     <img src="img/logo.png" alt="hallownest logo">
                     <span>University of Hallownest</span>
-            </a>
-            <div class="nav">
-                <p class="links">
-                    <a href="about.html">ABOUT</a>
-                    <a href="academics.html" class="middlelink">ACADEMICS</a>
-                    <a href="admissions.html">ADMISSIONS</a>
-                </p>
+                </a>
+                <img id="hamburger" src="img/hamburger.png" alt="hamburger" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <div class="nav">
+                    <p class="links">
+                        <a href="about.html">ABOUT</a>
+                        <a href="academics.html" class="middlelink">ACADEMICS</a>
+                        <a href="admissions.html">ADMISSIONS</a>
+                    </p>
+                </div>
+            </div>
+            <div id="hamburger-menu" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <a href="about.html">ABOUT</a>
+                <a href="academics.html" class="middlelink">ACADEMICS</a>
+                <a href="admissions.html">ADMISSIONS</a>
             </div>
         </div>
 
@@ -35,6 +43,7 @@
 
         </div>
 
+        <div id="footer-space"></div>
         <footer>
             <div id="footer-main">
                 <h2>UNIVERSITY OF HALLOWNEST</h2>
@@ -52,9 +61,9 @@
                     <div><h3>CONNECT WITH US</h3>
                         <div id="contacts">
                             <div id="phone-numbers" class="contacts-section">
-                                <p>(63) 045 296 2948</p>
-                                <p>(63) 045 672 9165</p>
-                                <p>(63) 045 193 5715</p>
+                                <p><a href='tel:+630452962948'>(63) 045 296 2948</a></p>
+                                <p><a href='tel:+630456729165'>(63) 045 672 9165</a></p>
+                                <p><a href='tel:+630451935715'>(63) 045 193 5715</a></p>
                             </div>
                             <div id="handles" class="contacts-section">
                                 <div id="icons">

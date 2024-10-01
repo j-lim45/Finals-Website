@@ -9,16 +9,24 @@
     <body>
         <div class="header-space"></div>
         <div id="header">
-            <a class="logo" href="index.html">
+            <div id="header-container">
+                <a class="logo" href="index.html">
                     <img src="img/logo.png" alt="hallownest logo">
                     <span>University of Hallownest</span>
-            </a>
-            <div class="nav">
-                <p class="links">
-                    <a href="about.html">ABOUT</a>
-                    <a href="academics.html" class="middlelink">ACADEMICS</a>
-                    <a href="admissions.html">ADMISSIONS</a>
-                </p>
+                </a>
+                <img id="hamburger" src="img/hamburger.png" alt="hamburger" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <div class="nav">
+                    <p class="links">
+                        <a href="about.html">ABOUT</a>
+                        <a href="academics.html" class="middlelink">ACADEMICS</a>
+                        <a href="admissions.html">ADMISSIONS</a>
+                    </p>
+                </div>
+            </div>
+            <div id="hamburger-menu" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <a href="about.html">ABOUT</a>
+                <a href="academics.html" class="middlelink">ACADEMICS</a>
+                <a href="admissions.html">ADMISSIONS</a>
             </div>
         </div>
 
@@ -35,7 +43,7 @@
                 </div>
                 <div class="input-field" id="birthday-field">
                     <label for="birthday">Birthday: </label>
-                    <input type="text" id="birthday" name="birthday" placeholder="DD/MM/YYYY" required>
+                    <input type="text" id="birthday" name="birthday" placeholder="DD/MM/YYYY" >
                     <p>Date/Month/Year</p>
                 </div>
 
@@ -43,7 +51,7 @@
                 <div class="input-field" id="sex-field">
                     <label for="sex">Sex:</label>
 
-                    <select name="sex" id="sex" required>
+                    <select name="sex" id="sex" >
                         <option value="">--Select--</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -53,12 +61,12 @@
 
                 <div class="input-field" id="email-field">
                     <label for="email">Email address:</label>
-                    <input type="email" id="email" name="email" placeholder="name@emailprovider.com" required>
+                    <input type="email" id="email" name="email" placeholder="name@emailprovider.com" >
                 </div>
 
                 <div class="input-field" id="number-field">
                     <label for="phone-number">Phone Number:</label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="0491 570 006" required>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="0491 570 006" >
                 </div>
 
                 <div class="upload-field" id="upload-field">
@@ -68,83 +76,83 @@
                             <th><p>Grade 12 Copy of Grades</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('grade-12').click()">Upload</button>
-                                <input type="file" id="grade-12" required>
+                                <input type="file" id="grade-12" >
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Recommendation Letter</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('recommendation').click()">Upload</button>
-                                <input type="file" id="recommendation" required>
+                                <input type="file" id="recommendation" >
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>Birth Certificate</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('birth-certificate').click()">Upload</button>
-                                <input type="file" id="birth-certificate" required>
+                                <input type="file" id="birth-certificate" >
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Medical Certificate</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('med-certificate').click()">Upload</button>
-                                <input type="file" id="med-certificate" required>
+                                <input type="file" id="med-certificate" >
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>Social Security</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('social-security').click()">Upload</button>
-                                <input type="file" id="social-security" required>
+                                <input type="file" id="social-security" >
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Curriculum Vitae</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('cv').click()">Upload</button>
-                                <input type="file" id="cv" required>
+                                <input type="file" id="cv" >
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>Valid ID</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('valid-id').click()">Upload</button>
-                                <input type="file" id="valid-id" required>
+                                <input type="file" id="valid-id" >
                             </th>
                         </tr>
                         <tr class="upload-row odd-row">
                             <th><p>Police Clearance</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('police-clearance').click()">Upload</button>
-                                <input type="file" id="police-clearance" required>
+                                <input type="file" id="police-clearance" >
                             </th>
                         </tr>
                         <tr class="upload-row even-row">
                             <th><p>NBI Clearance</p></th>
                             <th>
                                 <button type="button" onclick="document.getElementById('nbi-clearance').click()">Upload</button>
-                                <input type="file" id="nbi-clearance" required>
+                                <input type="file" id="nbi-clearance" >
                             </th>
                         </tr>
                     </table>
 
                     <div class="input-field" id="program-choice">
-                        <label for="sex">Program Choice:</label>
+                        <label for="program-choice">Program Choice:</label>
     
-                        <select name="program-choice" id="program-choice" required>
+                        <select name="program-choice" id="program-choice" onchange="selectProgram()" required>
                                 <option value="">--Select--</option>
                             <optgroup label="College of Engineering and Technology">
-                                <option>BS Civil Engineering</option>
-                                <option>BS Mechanical Engineering</option>
-                                <option>BS Architecture</option>
-                                <option>BS Information Technology</option>
+                                <option value="1">BS Civil Engineering</option>
+                                <option value="2">BS Mechanical Engineering</option>
+                                <option value="3">BS Architecture</option>
+                                <option value="4">BS Information Technology</option>
                             </optgroup>
                             <optgroup label="College of the Arts and Science">
-                                <option>BS Entemology</option>
-                                <option>BS Soul Manipulation</option>
-                                <option>AB Fine Arts</option>
-                                <option>AB Education</option>
+                                <option value="5">BS Entemology</option>
+                                <!-- <option>BS Soul Manipulation</option> -->
+                                <option value="6">AB Fine Arts</option>
+                                <option value="7">AB Education</option>
                             </optgroup>
                         </select>
                     </div>
@@ -169,6 +177,7 @@
             
         </div>
         
+        <div id="footer-space"></div>
         <footer>
             <div id="footer-main">
                 <h2>UNIVERSITY OF HALLOWNEST</h2>
@@ -186,9 +195,9 @@
                     <div><h3>CONNECT WITH US</h3>
                         <div id="contacts">
                             <div id="phone-numbers" class="contacts-section">
-                                <p>(63) 045 296 2948</p>
-                                <p>(63) 045 672 9165</p>
-                                <p>(63) 045 193 5715</p>
+                                <p><a href='tel:+630452962948'>(63) 045 296 2948</a></p>
+                                <p><a href='tel:+630456729165'>(63) 045 672 9165</a></p>
+                                <p><a href='tel:+630451935715'>(63) 045 193 5715</a></p>
                             </div>
                             <div id="handles" class="contacts-section">
                                 <div id="icons">

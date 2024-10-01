@@ -10,16 +10,24 @@
 
         <div class="header-space"></div>
         <div id="header">
-            <a class="logo" href="index.html">
+            <div id="header-container">
+                <a class="logo" href="index.html">
                     <img src="img/logo.png" alt="hallownest logo">
                     <span>University of Hallownest</span>
-            </a>
-            <div class="nav">
-                <p class="links">
-                    <a href="about.html">ABOUT</a>
-                    <a href="academics.html" class="middlelink">ACADEMICS</a>
-                    <a href="admissions.html">ADMISSIONS</a>
-                </p>
+                </a>
+                <img id="hamburger" src="img/hamburger.png" alt="hamburger" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <div class="nav">
+                    <p class="links">
+                        <a href="about.html">ABOUT</a>
+                        <a href="academics.html" class="middlelink">ACADEMICS</a>
+                        <a href="admissions.html">ADMISSIONS</a>
+                    </p>
+                </div>
+            </div>
+            <div id="hamburger-menu" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+                <a href="about.html">ABOUT</a>
+                <a href="academics.html" class="middlelink">ACADEMICS</a>
+                <a href="admissions.html">ADMISSIONS</a>
             </div>
         </div>
 
@@ -32,7 +40,7 @@
                 <h2>Form Connections</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut  venenatis ex. Nunc facilisis tempor metus, eu posuere libero viverra sit  amet. Nam leo mauris, aliquet sed justo ut, dignissim placerat justo. </p>            
             </div>
-            <div style="width: 5px; max-height: 90%; background-color: white; margin: 10px 20px">
+            <div id='thatoneline'>
             </div>
             <div>
                 <h2>Experience Education</h2>
@@ -72,7 +80,7 @@
                         <span>Sep. 4 2024</span>
                         <p>Dean Thistlewind speaks before Graduating Batch of 2024</p>
                     </div>
-                    <button class="light" style="margin: 10px auto">Read</button>
+                    <button class="light" style="margin: 10px auto" onclick="window.location.href = 'news1.html'">Read</button>
                 </div>
                 <div class="newscard">
                     <img src="img/top.png" alt="Logo of UH">
@@ -80,7 +88,7 @@
                         <span>Aug. 27 2024</span>
                         <p>UH among top universities in new WS rankings</p>
                     </div>
-                    <button class="light" style="margin: 10px auto">Read</button>
+                    <button class="light" style="margin: 10px auto" onclick="window.location.href = 'news2.html'">Read</button>
                 </div>
                 <div class="newscard">
                     <img src="img/tramway.PNG" alt="Tramway">
@@ -88,12 +96,12 @@
                         <span>Aug. 21 2024</span>
                         <p>Broken tramway inside campus fixed</p>
                     </div>
-                    <button class="light" style="margin: 10px auto">Read</button>
+                    <button class="light" style="margin: 10px auto" onclick="window.location.href = 'news3.html'">Read</button>
                 </div>
             </div>
         </div>
 
-
+        <div id="footer-space"></div>
         <footer>
             <div id="footer-main">
                 <h2>UNIVERSITY OF HALLOWNEST</h2>
@@ -111,9 +119,9 @@
                     <div><h3>CONNECT WITH US</h3>
                         <div id="contacts">
                             <div id="phone-numbers" class="contacts-section">
-                                <p>(63) 045 296 2948</p>
-                                <p>(63) 045 672 9165</p>
-                                <p>(63) 045 193 5715</p>
+                                <p><a href='tel:+630452962948'>(63) 045 296 2948</a></p>
+                                <p><a href='tel:+630456729165'>(63) 045 672 9165</a></p>
+                                <p><a href='tel:+630451935715'>(63) 045 193 5715</a></p>
                             </div>
                             <div id="handles" class="contacts-section">
                                 <div id="icons">

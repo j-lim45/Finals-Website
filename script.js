@@ -52,20 +52,6 @@
     
 })();
 
-function onsubmitfunc() {
-    window.addEventListener('submit', function(event){
-        
-    confirm('Confirm inputting of data?');
-    event.preventDefault(); /* Makes sure it doesnt do the default behavior  */
-    
-    console.log(document.getElementById("full-name").value)
-    nameToDisplay = document.getElementById("full-name").value;
-    window.location.href = "application-onsubmit.html";
-
-    })
-}
-
-
 var tableDisplay = new Map([
     ['bsce', false],
     ['bsme', false],
@@ -87,4 +73,49 @@ function displayTableCE(idName) {
         document.getElementById(idName.concat('Arrow')).innerHTML = 'v';
         tableDisplay.set(idName, true);
     }
+}
+
+var clickedHamburger = false;
+
+function displayHamburgerMenu() {document.getElementById('hamburger-menu').style.display = "flex"}
+function hideHamburgerMenu() {
+    if (!clickedHamburger) {
+        
+        document.getElementById('hamburger-menu').style.display = "none"
+    }
+}
+
+let containingElement = document.querySelector('#container');
+
+document.body.addEventListener('click', function( event ){
+
+	if(event.target.id == "hamburger" || event.target.id == "hamburger-menu"){
+        clickedHamburger = true;
+		displayHamburgerMenu();
+	} else {
+        clickedHamburger = false;
+		hideHamburgerMenu();
+	}
+});
+
+function onsubmitfunc() {
+    window.addEventListener('submit', function(event){
+        
+    if (confirm('Confirm inputting of data?')) { /* Goes to submitted page if confirmed */
+        event.preventDefault(); /* Makes sure it doesnt do the default behavior  */
+    
+        nameToDisplay = document.getElementById("full-name").value;
+
+        localStorage.setItem('full-name', nameToDisplay);
+
+        window.location.href = "application-onsubmit.html";
+    } else {
+        event.preventDefault(); /* Does nothing if cancelled */
+    }
+
+    })
+}
+
+function displaySubmittedValues() { /* Displays name on application submitted page */
+    document.getElementById('applicantName').innerHTML = localStorage.getItem('full-name');
 }

@@ -9,35 +9,54 @@
 <body>
     <div class="header-space"></div>
     <div id="header">
-        <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="Universe of Hallownest logo">
+        <div id="header-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="hallownest logo">
                 <span>University of Hallownest</span>
-        </a>
-        <div class="nav">
-            <p class="links">
-                <a href="about.html">ABOUT</a>
-                <a href="academics.html" class="middlelink">ACADEMICS</a>
-                <a href="admissions.html">ADMISSIONS</a>
-            </p>
+            </a>
+            <img id="hamburger" src="img/hamburger.png" alt="hamburger" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+            <div class="nav">
+                <p class="links">
+                    <a href="about.html">ABOUT</a>
+                    <a href="academics.html" class="middlelink">ACADEMICS</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                </p>
+            </div>
+        </div>
+        <div id="hamburger-menu" onmouseover="displayHamburgerMenu()" onmouseout="hideHamburgerMenu()">
+            <a href="about.html">ABOUT</a>
+            <a href="academics.html" class="middlelink">ACADEMICS</a>
+            <a href="admissions.html">ADMISSIONS</a>
         </div>
     </div>
 
     <div id="academics" class="webpage-1">
-        <h2>Academics</h2>
+        <div class="header-section">
+            <h2>Academics</h2>
+        </div>
+
         <div class="big-picture">
             <img src="img/academics-page.png" alt="Main facade campus">
         </div>
 
-        <div class="individual-program">
-            <h3>College of Engineering and Technology</h3>
-            <button class="light-blue" onclick="window.location.href = 'cet.html'">Programs</button>
+        <div id="program-list">
+            <div class="individual-program" id="cetProgram">
+                <div class="program-text">
+                    <h3>College of Engineering and Technology</h3>
+                    <button class="light-2" onclick="window.location.href = 'cet.html'">Programs</button>
+                </div>
+            </div>
+            <div class="individual-program" id="casProgram">
+                <div class="program-text">
+                    <h3>College of the Arts and Science</h3>
+                    <button class="light-2" onclick="window.location.href = 'cas.html'">Programs</button>
+                </div>
+            </div>
         </div>
-        <div class="individual-program">
-            <h3>College of the Arts and Science</h3>
-            <button class="light-blue" onclick="window.location.href = 'cas.html'">Programs</button>
-        </div>
+
     </div>
 
+    <div id="footer-space"></div>
     <footer>
         <div id="footer-main">
             <h2>UNIVERSITY OF HALLOWNEST</h2>
@@ -55,9 +74,9 @@
                 <div><h3>CONNECT WITH US</h3>
                     <div id="contacts">
                         <div id="phone-numbers" class="contacts-section">
-                            <p>(63) 045 296 2948</p>
-                            <p>(63) 045 672 9165</p>
-                            <p>(63) 045 193 5715</p>
+                            <p><a href='tel:+630452962948'>(63) 045 296 2948</a></p>
+                            <p><a href='tel:+630456729165'>(63) 045 672 9165</a></p>
+                            <p><a href='tel:+630451935715'>(63) 045 193 5715</a></p>
                         </div>
                         <div id="handles" class="contacts-section">
                             <div id="icons">
