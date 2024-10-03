@@ -1070,7 +1070,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 .dropdown tr td:nth-child(4) { /* Prereq column */ width: 200px;}
 
 #facultyTab {
-    margin: 30px 0;
+    margin-bottom: 30px;
 }
 
 /* #facultyTab h2 { Faculty 
@@ -1311,6 +1311,16 @@ footer div:nth-child(1) { /*  */
     width: 100%;
 }
 
+.collegeImage h2 {
+    top: 10%;
+    font-size: 48px;
+}
+
+#form-buttons input {
+    width: 250px;
+}
+
+
 }
 
 @media only screen and (max-width: 1600px) { /* 120% */
@@ -1324,6 +1334,20 @@ footer div:nth-child(1) { /*  */
 @media screen and (max-width: 1120px) {
     .idk2 p {
         font-size: 32px;
+    }
+
+    .light {
+        border: 2px solid var(--white);
+    }
+
+    .light-2 {
+        font-size: 24px !important;
+    }
+
+    .dark {
+        font-size: 24px !important;
+        width: 150px;
+        height: 60px;
     }
 }
 
@@ -1435,6 +1459,18 @@ footer div:nth-child(1) { /*  */
         margin: 25px;
     }
 
+    .dark {
+        font-size: 24px !important;
+        width: 100px;
+        height: 40px;
+        font-size: 12px !important;
+    }
+
+    .light-2 {
+        width: 100px;
+        font-size: 14px !important;
+    }
+
 
     .idk3 h2 { /* ACADEMICS */
         font-size: 32px;
@@ -1538,11 +1574,11 @@ footer div:nth-child(1) { /*  */
         margin: 0;
     }
 
-    #admissions-text h3, #form h2, #submitted-content h2, .collegeDescription h3, .header-section h3 {
+    #admissions-text h3, #form h2, #submitted-content h2, .collegeDescription h3, .header-section h3, #briefHistory {
         font-size: 24px;
     }
 
-    #academicDescription, #admissions-text p, #text-reminder, label, th p, #submit-text p {
+    #academicDescription, #admissions-text p, #text-reminder, label, th p, #submit-text p, #history-content p, #about p {
         font-size: 16px;
     }
 
@@ -1605,5 +1641,34 @@ footer div:nth-child(1) { /*  */
 
     #certify-checkbox input {
         width: 50%;
+    }
+
+    /* -------------- ABOUT --------------------- */
+
+    #history-content {
+        flex-direction: column;
+    }
+
+    #history-content img {
+        height: 240px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    #history-content p {
+        margin: 10px auto;
+        text-shadow: 0 0 30px black;
+    }
+
+    #about .header-section h2 {
+        font-size: 24px;
+    }
+
+    #vision-mission {
+        height: 420px;
+    }
+
+    #administration-container .individualFaculty {
+        margin: 10px 0 !important;
     }
 }
