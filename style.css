@@ -559,7 +559,7 @@ width: 90%;
 }
 
 #history-content {
-    color: var(--pink);
+    color: #ebddb8;
 }
 
 #about p { /* adds a bit of shadow for every p in about */   
@@ -594,10 +594,12 @@ width: 90%;
 
 #vision, #mission {
     background-color: var(--pink);
+    margin-top: 0 !important;
+    color: var(--blue-4); /* targets the text inside vision and mission */
 }
 
-#vision {margin-right: 2.5px !important; margin-top: 0 !important;}
-#mission {margin-left: 2.5px !important; margin-top: 0 !important;}
+#vision {margin-right: 2.5px !important;}
+#mission {margin-left: 2.5px !important;}
 
 #admin {
     display: flex;
@@ -1359,6 +1361,7 @@ footer div:nth-child(1) { /*  */
 
     .firstimage h1 {
         top: 175px;
+        text-shadow: 2px 2px 8px black
     }
 
     .logo span { /* University of Hallownest */
@@ -1403,7 +1406,7 @@ footer div:nth-child(1) { /*  */
     
     .idk h2 { /* Form Connections / Experience Education */
         font-size: 14px;
-        width: 95%;
+        width: 100%;
     }
 
     .idk p {
@@ -1443,6 +1446,9 @@ footer div:nth-child(1) { /*  */
     }
 
     #news-headline {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
         font-size: 24px;
     }
 
@@ -1560,7 +1566,7 @@ footer div:nth-child(1) { /*  */
     }
 
     .program-text h3 {/* College of... */
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* INDIVIDUAL COLLEGES */
