@@ -548,7 +548,7 @@ width: 90%;
 
 #history-container {
     margin: 5px;
-    background-color: var(--pink-2);
+    background-color: var(--blue);
 }
 
 #history-content {
@@ -558,12 +558,20 @@ width: 90%;
     margin: 0 auto;
 }
 
-#history-content img, #history-content p {
+#history-content {
+    color: var(--pink);
+}
+
+#about p { /* adds a bit of shadow for every p in about */   
+    text-shadow: 0 0 45px black;
+}
+
+#history-content img, #history-content p { /* makes both the image and text in history section inline */
     display: inline-block;
     margin: 1rem;
 }
 
-#history-content img {
+#history-content img { /* old drawing of university with pk */
     width: 300px;
 }
 
@@ -571,11 +579,58 @@ width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 480px;
+    height: 380px;
 }
 
 #vision-mission div {
-    width: 40%;
+    width: 100%;
+    margin: 5px;
+}
+
+#vision div, #mission div { /* Targets the specific .header-sections in vision and mission to take the entire width of its parent div */
+    width: 100%; 
+    margin: 0;
+}
+
+#vision, #mission {
+    background-color: var(--pink);
+}
+
+#vision {margin-right: 2.5px !important; margin-top: 0 !important;}
+#mission {margin-left: 2.5px !important; margin-top: 0 !important;}
+
+#admin {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 350px;
+}
+
+#administration-container {
+    flex-direction: row;
+}
+
+#administration-container div {
+    margin: 5px 0;
+}
+
+#administration-container .collegeFaculty {
+    background-color: var(--pink-2);
+}
+
+
+#administration-container .collegeFaculty div {
+    margin: auto 30px;
+}
+
+#adminstration h2 {
+    font-size: 20px;
+}
+
+#administration p  {
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
 }
 
 /* ---------------------------- ACADEMICS --------------------------------- */
@@ -1030,7 +1085,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     height: 40px;
 } */
 
-#collegeFaculty {
+.collegeFaculty {
     width: 100%;
     height: 350px;
     display: flex;
@@ -1127,6 +1182,10 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 
     .dropdown-tab button {
         width: 100%;
+    }
+
+    #vision p, #mission p {
+        font-size: 20px;
     }
 
 }
@@ -1494,7 +1553,7 @@ footer div:nth-child(1) { /*  */
         text-align: left;
     }
 
-    #collegeFaculty {
+    .collegeFaculty {
         flex-direction: column;
         height: 100%;
         align-items: center;
