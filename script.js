@@ -10,7 +10,7 @@
 
     var header = document.getElementById('header');
     var toggled;
-    var threshold = 200;
+    var threshold = 1;
 
     var checkScroll = function() {
         curScroll = w.scrollY || doc.scrollTop;
@@ -77,20 +77,27 @@ function displayTableCE(idName) {
 
 var clickedHamburger = false;
 
-function displayHamburgerMenu() {document.getElementById('hamburger-menu').style.display = "flex"}
+function displayHamburgerMenu() {
+    if (!clickedHamburger) {
+        document.getElementById('hamburger').style.filter = "hue-rotate(125deg) saturate(200%)";
+    }
+    document.getElementById('hamburger-menu').style.display = "flex";
+};
+
 function hideHamburgerMenu() {
     if (!clickedHamburger) {
-        
-        document.getElementById('hamburger-menu').style.display = "none"
+        document.getElementById('hamburger-menu').style.display = "none";
+        document.getElementById('hamburger').style.filter = "None";
     }
 }
 
-let containingElement = document.querySelector('#container');
+// let containingElement = document.querySelector('#container');
 
 document.body.addEventListener('click', function( event ){
 
 	if(event.target.id == "hamburger" || event.target.id == "hamburger-menu"){
         clickedHamburger = true;
+        document.getElementById('hamburger').style.filter = "hue-rotate(125deg) saturate(400%)";
 		displayHamburgerMenu();
 	} else {
         clickedHamburger = false;

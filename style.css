@@ -38,7 +38,7 @@ body {
 }
 
 a {text-decoration: none;} /* No hyperlink shall ever have a default underline */
-
+a:hover {color: var(--pink-2) !important} /* Something tells me this breaks something */
 
 p, h1 {
     font-family: var(--serif-text); /* Default font for h1 and p is Kaisei Tokumin */
@@ -445,6 +445,10 @@ footer h2 {
     width: 500px;
 }
 
+.footer-text a {
+    color: var(--white);
+}
+
 #contacts div { /* Overrides .footer-text div style, makes sure sections in contacts are less than half of its parent width */
     width: 200px;
 }
@@ -542,6 +546,11 @@ footer div:nth-child(1) { /* The blue part of the footer */
 width: 90%;
 }
 
+#history-container {
+    margin: 5px;
+    background-color: var(--pink-2);
+}
+
 #history-content {
     display: flex;
     flex-direction: row;
@@ -576,6 +585,7 @@ width: 90%;
     justify-content: center;
     margin: 0;
     background-color: var(--blue-2);
+    box-shadow: 0 0 5px black;
 }
 
 .big-picture img { /* Big header picture below the main page header text */
@@ -600,6 +610,12 @@ width: 90%;
 
 #casProgram {
     background-image: url('img/casProgramPic.png');
+}
+
+#academicDescription {
+    font-size: 24px;
+    text-align: center;
+    color: var(--blue-4);
 }
 
 .program-text {
@@ -683,6 +699,8 @@ width: 90%;
 #text-reminder { /* Please input all fields accurately. */
     color: #a2a2a2;
     font-family: var(--sans-serif-text-3-italic);
+    margin-left: 30px;
+    font-size: 24px;
 }
 
 label, th p { /* Targets all label and the file upload label */
@@ -740,6 +758,10 @@ select { /* Text inside every input selection */
     color: var(--blue-3);
     font-family: var(--sans-serif-text-3-light);
     font-size: 32px;
+}
+
+#upload-field tbody {
+    border-radius: 8px;
 }
 
 tr, tr p { /* Default dark color on upload documents table text */
@@ -920,10 +942,13 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     margin: 0 30px;
 }
 
-#curriculumheader { /* Curriculum */
+.header-section h3 { /* Curriculum */
     font-family: var(--serif-header);
-    font-size: 48px;
-    text-align: center;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 0;
 }
 
 .dropdown-table {
@@ -993,7 +1018,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     margin: 30px 0;
 }
 
-#facultyTab h2 { /* Faculty */
+/* #facultyTab h2 { Faculty 
     text-align: center;
     background-color: var(--pink-2);
     font-family: var(--serif-header-2);
@@ -1003,7 +1028,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     border: 2px solid var(--blue-4);
     margin: 0;
     height: 40px;
-}
+} */
 
 #collegeFaculty {
     width: 100%;
@@ -1048,6 +1073,7 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 }
 
 
+
 @media only screen and (max-width: 1120px) { /* 170% */
     .nav {
         display: none;
@@ -1065,6 +1091,11 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     #hamburger {
         display: block;
         margin-right: 30px;
+      
+    }
+
+    #hamburger:hover {
+        cursor: pointer;
     }
 
     .newscard p {
@@ -1072,9 +1103,12 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
     }
 
     button {
-        width: 100px !important;
         height: 40px;
         font-size: 12px !important;
+    }
+
+    .light, .dark {
+        width: 100px;
     }
 
     .idk2 h2 {
@@ -1089,6 +1123,10 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
         font-size: 32px;
         
         margin: 2vw 10%;
+    }
+
+    .dropdown-tab button {
+        width: 100%;
     }
 
 }
@@ -1234,13 +1272,15 @@ footer div:nth-child(1) { /*  */
 
 @media only screen and (max-width:450px) {
 
+    .logo {width: 50%;}
+
     .firstimage h1 {
         top: 175px;
     }
 
     .logo span { /* University of Hallownest */
         font-size: 16px;
-        width: 40%;
+        width: 100%;
     }
 
     #header {
@@ -1319,6 +1359,23 @@ footer div:nth-child(1) { /*  */
         margin: 5px;
     }
 
+    #news-headline {
+        font-size: 24px;
+    }
+
+    #byline {
+        font-size: 12px;
+    }
+
+    #news-text {
+        width: 95%;
+    }
+
+    #news-text p {
+        font-size: 16px;
+        margin: 25px;
+    }
+
 
     .idk3 h2 { /* ACADEMICS */
         font-size: 32px;
@@ -1367,5 +1424,127 @@ footer div:nth-child(1) { /*  */
     
     #contacts div {
         height: 40px;
+    }
+
+    .collegeImage img {
+        height: 120px;
+    }
+
+    .collegeImage h2 { /* it says academics */
+        font-size: 24px;
+        top: 110px;
+    }
+
+    .collegeDescription p {
+        font-size: 14px;
+    }
+
+    .big-picture img {
+        margin: 20px;
+    }
+
+    #academicDescription {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .program-text { /* adjust the div for program links */
+        height: 80px;
+    }
+
+    .light-2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 30px;
+        border: 2px solid var(--white);
+    }
+    
+
+    .dark:hover {
+        border: 2px solid var(--blue-3);
+    }
+
+    .program-text h3 {/* College of... */
+        font-size: 20px;
+    }
+
+    /* INDIVIDUAL COLLEGES */
+
+
+    .individual-program { /* adjusts the image inside individual programs to not stretch */
+        background-size: 100% 100%;
+    }
+
+    .big-picture img {
+        margin: 0;
+    }
+
+    #admissions-text h3, #form h2, #submitted-content h2, .collegeDescription h3, .header-section h3 {
+        font-size: 24px;
+    }
+
+    #academicDescription, #admissions-text p, #text-reminder, label, th p, #submit-text p {
+        font-size: 16px;
+    }
+
+    .dropdown span:nth-of-type(1) {
+        font-size: 16px;
+        line-height: 20px;
+        margin: auto 0;
+        text-align: left;
+    }
+
+    #collegeFaculty {
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+
+    .individualFaculty {
+        margin: 10px 20px;
+    }
+
+    #submit-text p {
+        line-height: 1.5rem;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    th button {
+        height: 25px;
+        width: 100px;
+    }
+
+    tr th:nth-child(1) {
+        width: 50%;
+    }
+
+    tr th:nth-child(2) {
+        width: 20%;
+    }
+
+    .dropdown tr th:nth-child(1) { /* Course code */ width: 2px;}
+    .dropdown tr th:nth-child(2) { /* Course title */ width: 420px;}
+    .dropdown tr td:nth-child(4) { /* Prereq column */ width: 200px;}
+
+    .dropdown th { font-size: 12px;}
+    .dropdown td { font-size: 12px;}
+
+    input, select {
+        width: 80%;
+    }
+
+    input[type="file"], input[type="file"]:focus {
+        font-size: 10px;
+    }
+
+    #certify-checkbox {
+        margin: 0;
+    }
+
+    #certify-checkbox input {
+        width: 50%;
     }
 }
