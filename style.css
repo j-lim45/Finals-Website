@@ -462,8 +462,11 @@ footer h2 {
 
 .footer-text div:nth-child(2) h4 {  /* Data privacy and etc. individual headers */
     margin: 5px;
-    text-decoration: underline;
 }
+
+/* Middle footer text */
+.footer-text div:nth-child(2) h4 a {text-decoration: underline}
+.footer-text div:nth-child(2) a:hover {text-decoration-color: var(--pink-2)}
 
 
 footer h3, footer h4, footer p {
