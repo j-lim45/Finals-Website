@@ -576,6 +576,7 @@ width: 90%;
 
 #history-content img { /* old drawing of university with pk */
     width: 300px;
+    height: 250px;
 }
 
 #vision-mission {
@@ -1373,7 +1374,7 @@ footer div:nth-child(1) { /*  */
     }
 
     .idk2 {
-        height: 400px;
+        height: 440px;
     }
 
     .idk3 h2 {
@@ -1395,6 +1396,13 @@ footer div:nth-child(1) { /*  */
     tr th:nth-child(1) { /* Increases width of the label column */
         width: 740px;
     }
+
+    #history-content img { /* old drawing of university with pk */
+        width: 300px;
+        height: 250px;
+        margin: auto 0;
+    }
+    
 
     #certify-checkbox input {
         width: 15%;
@@ -1456,7 +1464,7 @@ footer div:nth-child(1) { /*  */
     }
 
     .idk {
-        height: 200px;
+        height: 220px;
     }
 
     
