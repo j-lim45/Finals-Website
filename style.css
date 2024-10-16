@@ -539,7 +539,7 @@ footer div:nth-child(1) { /* The blue part of the footer */
     font-size: 24px;
     width: 80%;
     text-align: justify;
-    margin: 1rem auto;
+    margin: 2.25rem auto;
 }
 
 #about hr {
@@ -559,11 +559,11 @@ width: 90%;
 }
 
 #history-content {
-    color: #ebddb8;
+    color: #e0dbcc;
 }
 
 #about p { /* adds a bit of shadow for every p in about */   
-    text-shadow: 0 0 45px black;
+    text-shadow: 0 0 90px black;
 }
 
 #history-content img, #history-content p { /* makes both the image and text in history section inline */
@@ -579,7 +579,7 @@ width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 380px;
+    height: 320px;
 }
 
 #vision-mission div {
@@ -1161,11 +1161,11 @@ input[type=text]:focus { /* inputted text in a textarea when focused on */
 
     button {
         height: 40px;
-        font-size: 12px !important;
+        font-size: 22px !important;
     }
 
     .light, .dark {
-        width: 100px;
+        width: 150px;
     }
 
     .idk2 h2 {
@@ -1348,8 +1348,61 @@ footer div:nth-child(1) { /*  */
 
     .dark {
         font-size: 24px !important;
-        width: 150px;
+        width: 200px;
         height: 60px;
+    }
+}
+
+/************************TABLET*************************************/
+
+@media only screen and (max-width:1200px) {
+    .firstimage, .firstimage img {
+        height: 600px;
+    }
+
+    .firstimage h1 {
+        top: 330px;
+        font-size: 56px;
+    }
+
+    .idk {
+        height: 200px;
+    }
+
+    .idk2 {
+        height: 400px;
+    }
+
+    .idk3 h2 {
+        padding-top: 15px;
+    }
+
+    .idk2 h2, .idk3 h2 {
+        font-size: 56px;
+    }
+
+    .collegeDescription p {
+        font-size: 18px;
+    }
+
+    .idk3 button {
+        margin: 3vw 7vw;
+    }
+
+    tr th:nth-child(1) { /* Increases width of the label column */
+        width: 740px;
+    }
+
+    #certify-checkbox input {
+        width: 15%;
+    }
+
+    #news-headline {
+        font-size: 42px;
+    }
+
+    #news-text p {
+        font-size: 28px;
     }
 }
 
@@ -1491,7 +1544,7 @@ footer div:nth-child(1) { /*  */
     }
 
     .idk3 button {
-        margin: 10px 0;
+        margin: 0;
     }
 
     .newscard div p {
@@ -1616,6 +1669,7 @@ footer div:nth-child(1) { /*  */
     th button {
         height: 25px;
         width: 100px;
+        font-size: 18px !important;
     }
 
     tr th:nth-child(1) {
